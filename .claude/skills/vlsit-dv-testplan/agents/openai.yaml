@@ -1,0 +1,4 @@
+interface:
+  display_name: "DV Test Plan"
+  short_description: "Traceable DV Test Plan for hardware verification"
+  default_prompt: "Use $vlsit-dv-testplan for the supplied DUT and report evidence and unresolved assumptions."

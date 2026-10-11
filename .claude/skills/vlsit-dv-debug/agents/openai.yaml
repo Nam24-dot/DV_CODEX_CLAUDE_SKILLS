@@ -1,0 +1,4 @@
+interface:
+  display_name: "DV Failure Debug"
+  short_description: "Traceable DV Failure Debug for hardware verification"
+  default_prompt: "Use $vlsit-dv-debug for the supplied DUT and report evidence and unresolved assumptions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "DV Sign-off Review"
+  short_description: "Traceable DV Sign-off Review for hardware verification"
+  default_prompt: "Use $vlsit-dv-signoff for the supplied DUT and report evidence and unresolved assumptions."

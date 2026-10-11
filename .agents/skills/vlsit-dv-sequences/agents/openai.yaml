@@ -1,0 +1,4 @@
+interface:
+  display_name: "DV Stimulus"
+  short_description: "Traceable DV Stimulus for hardware verification"
+  default_prompt: "Use $vlsit-dv-sequences for the supplied DUT and report evidence and unresolved assumptions."

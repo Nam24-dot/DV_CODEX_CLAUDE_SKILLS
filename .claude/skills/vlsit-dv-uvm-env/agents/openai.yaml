@@ -1,0 +1,4 @@
+interface:
+  display_name: "UVM Environment"
+  short_description: "Traceable UVM Environment for hardware verification"
+  default_prompt: "Use $vlsit-dv-uvm-env for the supplied DUT and report evidence and unresolved assumptions."

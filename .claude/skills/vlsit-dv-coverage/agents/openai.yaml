@@ -1,0 +1,4 @@
+interface:
+  display_name: "DV Coverage Closure"
+  short_description: "Traceable DV Coverage Closure for hardware verification"
+  default_prompt: "Use $vlsit-dv-coverage for the supplied DUT and report evidence and unresolved assumptions."

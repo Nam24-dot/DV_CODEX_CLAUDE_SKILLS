@@ -1,0 +1,4 @@
+interface:
+  display_name: "DV Regression"
+  short_description: "Traceable DV Regression for hardware verification"
+  default_prompt: "Use $vlsit-dv-regression for the supplied DUT and report evidence and unresolved assumptions."

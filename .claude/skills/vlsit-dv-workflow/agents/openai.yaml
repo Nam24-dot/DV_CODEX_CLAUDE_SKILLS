@@ -1,0 +1,4 @@
+interface:
+  display_name: "DV Workflow"
+  short_description: "Traceable DV Workflow for hardware verification"
+  default_prompt: "Use $vlsit-dv-workflow for the supplied DUT and report evidence and unresolved assumptions."

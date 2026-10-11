@@ -1,0 +1,4 @@
+interface:
+  display_name: "SVA and Formal"
+  short_description: "Traceable SVA and Formal for hardware verification"
+  default_prompt: "Use $vlsit-dv-sva-formal for the supplied DUT and report evidence and unresolved assumptions."

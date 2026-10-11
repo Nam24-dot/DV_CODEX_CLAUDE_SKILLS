@@ -1,0 +1,14 @@
+[
+  {
+    "run_id": "fifo_smoke_seed_1",
+    "test": "fifo_smoke",
+    "seed": 1,
+    "configuration": "depth_4",
+    "status": "NOT_RUN",
+    "command": [],
+    "tool_version": "not discovered",
+    "exit_code": null,
+    "log": "",
+    "reason": "Illustrative record only; no simulator run has occurred."
+  }
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "DV Scoreboard"
+  short_description: "Traceable DV Scoreboard for hardware verification"
+  default_prompt: "Use $vlsit-dv-scoreboard for the supplied DUT and report evidence and unresolved assumptions."

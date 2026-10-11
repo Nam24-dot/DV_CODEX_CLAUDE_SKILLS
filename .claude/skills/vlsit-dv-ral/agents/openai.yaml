@@ -1,0 +1,4 @@
+interface:
+  display_name: "UVM Register Model"
+  short_description: "Traceable UVM Register Model for hardware verification"
+  default_prompt: "Use $vlsit-dv-ral for the supplied DUT and report evidence and unresolved assumptions."
