@@ -1,5 +1,17 @@
 # Suite validation record
 
+## VIP integration addition - 2026-10-25
+
+Added `vlsit-dv-vip` with installation/compatibility, role/ownership, UVM/DPI integration, wrapper/configuration, monitor conversion, independent checking, RAL, coverage, reset/power recovery and migration guidance. Existing workflow, UVM environment, protocol, regression and debug entrypoints route to it when applicable.
+
+Executed checks:
+- Suite validator: 16 skills per tool, 147 files per tree, zero structural errors.
+- Helper tests: 3 methods passed. Validator mutation/baseline tests: 6 methods passed.
+- Environment-provided skill-creator quick validator: both new VIP skill copies passed using a temporary PyYAML dependency; temporary cleanup completed.
+- Staged whitespace and paired-tree checks are required before publishing.
+
+The VIP behavioral fixture is provided but not executed as a model evaluation. No installed commercial VIP, license checkout, simulator build, DPI loading or actual DUT/VIP integration was tested. The sources are workflow guidance, not bundled executable VIP.
+
 ## Expansion review - 2026-10-25
 
 The working-tree expansion adds detailed workflows and review ledgers to the original 11 skills, plus GLS/SDF, UPF low-power, CDC/RDC and protocol skills. GLS follows PRE_SYNTH, POST_PNR without SDF and POST_PNR_SDF, with phase-specific procedures and evidence fields. There are now 15 skills and 135 files in each paired tree.

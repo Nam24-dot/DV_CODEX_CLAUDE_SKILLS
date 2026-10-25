@@ -30,3 +30,6 @@ Use the [output template](assets/output-template.md) and the applicable ledgers 
 
 - [channels.csv](assets/channels.csv)
 - [scenarios.csv](assets/scenarios.csv)
+
+## VIP integration
+For implementation-specific VIP APIs, wrappers, enables and compatibility, use `vlsit-dv-vip` when installed. Protocol-rule correctness and VIP integration are separate responsibilities; retain clause-to-check traceability.

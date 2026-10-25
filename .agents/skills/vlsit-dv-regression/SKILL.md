@@ -40,3 +40,6 @@ Read the normalized record schema in references/task.md, then run [summarize_run
 For implementation, review or closure beyond initial triage, read [detailed workflow](references/detailed-workflow.md). Use only the sections relevant to the requested scope.
 
 Use [review-ledger.csv](assets/review-ledger.csv) when recording the detailed review.
+
+## VIP integration
+For VIP-backed runs, record product release/patch, effective configuration, checker/coverage enables, DPI dependencies and license failures. Use `vlsit-dv-vip` for integration qualification when installed.

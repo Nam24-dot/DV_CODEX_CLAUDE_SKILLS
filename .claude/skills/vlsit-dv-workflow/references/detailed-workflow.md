@@ -20,6 +20,7 @@ Use the smallest workflow that answers the request. A failing seed starts with d
 | Netlist/SDF/timing notifier | gls | Netlist, libraries, SDF, operating mode and corner |
 | Power intent or power transition | upf | UPF revision, power-state and sequencing contract |
 | Clock/reset crossing report | cdc-rdc | Domain constraints, crossing inventory, tool evidence |
+| Vendor/internal VIP integration | vip | Release compatibility, instance ownership, monitor mapping and qualification |
 | Bus compliance | protocol | Protocol issue, supported features, endpoint roles |
 | Readiness decision | signoff | Required evidence, defects, waivers, approver |
 

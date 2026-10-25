@@ -1,6 +1,6 @@
 # Design Verification Skills for Codex and Claude Code
 
-Fifteen reusable skills for RTL, IP, and subsystem design verification, covering SystemVerilog/UVM, assertions, coverage, GLS/SDF, UPF low-power, CDC/RDC, protocols and verification evidence.
+Sixteen reusable skills for RTL, IP, and subsystem design verification, covering SystemVerilog/UVM, assertions, coverage, GLS/SDF, UPF low-power, CDC/RDC, protocols and verification evidence.
 
 ## Attribution
 
@@ -26,6 +26,7 @@ The DV instructions and project policies are independently authored. This is not
 | `vlsit-dv-gls` | Review and debug gate-level simulation, SDF annotation and timing/X failures |
 | `vlsit-dv-upf` | Review power intent and verify isolation, retention and power transitions |
 | `vlsit-dv-cdc-rdc` | Audit crossing constraints, CDC/RDC reports, protocols and waivers |
+| `vlsit-dv-vip` | Integrate vendor/internal VIP, wrappers, monitor streams, protocol checkers and coverage |
 | `vlsit-dv-protocol` | Verify protocol variants, channel timing, ordering and checker activation |
 
 ## Setup and use
@@ -136,3 +137,13 @@ See [behavioral evaluation cases](EVALUATION.md) for reproducible review scenari
 3. **Post-simulation after place and route + SDF (POST_PNR_SDF):** matching post-PNR netlist and extracted SDF, with corner-specific annotation and timing checks.
 
 See the [phase-by-phase GLS procedure](.agents/skills/vlsit-dv-gls/references/phases.md). No-SDF runs still record actual library delays and simulator options; power-aware operation is an additional mode rather than a fourth phase.
+
+## VIP integration
+
+Use `vlsit-dv-vip` for commercial, internal or open-source VIP/UVC/BFM integration. It covers compatibility and licenses, active/passive roles, signal ownership, build/UVM/DPI setup, project wrappers, sequence/response APIs, monitor conversion, independent scoreboards, RAL prediction, protocol checkers, coverage, reset/power recovery and release upgrades.
+
+```text
+$vlsit-dv-vip Integrate the installed AXI VIP into our existing UVM environment using its release-specific manual and examples. The DUT is the initiator; configure an active responder and a passive observation instance without competing drivers. Map observed transfers to our scoreboard and qualify smoke, stalls and reset with pending traffic.
+```
+
+For Claude use `/vlsit-dv-vip`. Provide the real product/release and available integration documentation. No proprietary VIP code is bundled, and no vendor API or simulator compatibility is assumed. VIP protocol checking complements independent DUT-specific checking.

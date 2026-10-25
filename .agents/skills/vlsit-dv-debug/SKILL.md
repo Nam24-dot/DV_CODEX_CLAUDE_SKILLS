@@ -34,3 +34,6 @@ Report changed artifacts, requirement/configuration scope, checks actually run, 
 For implementation, review or closure beyond initial triage, read [detailed workflow](references/detailed-workflow.md). Use only the sections relevant to the requested scope.
 
 Use [review-ledger.csv](assets/review-ledger.csv) when recording the detailed review.
+
+## VIP integration
+For VIP-related failures, inspect release compatibility, effective role/configuration, callback timing and raw-to-normalized transactions. Use `vlsit-dv-vip` when installed; a clean vendor summary without activity does not exclude integration defects.

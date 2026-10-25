@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verification IP Integration"
+  short_description: "Integrate VIP agents, checkers and coverage"
+  default_prompt: "Use $vlsit-dv-vip to integrate the supplied VIP release into our testbench and report compatibility, connections, checks and evidence."

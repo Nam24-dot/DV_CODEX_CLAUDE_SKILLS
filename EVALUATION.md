@@ -20,6 +20,8 @@ These are review-only fixtures for future Codex and Claude runs. No DUT executio
 14. **cdc-rdc:** Source and destination flops share a clock but have independent asynchronous resets. A CDC report shows no clock crossings. A waiver claims the data path is therefore safe. An RDC report has not been run. Review the claim and required setup/evidence.
 15. **protocol:** An AXI4-Lite monitor publishes a write only when AWVALID/AWREADY and WVALID/WREADY handshake in the same cycle. Legal test traffic accepts AW at cycle 5 and W at cycle 9. No write is published. Review the monitor and propose checks.
 
+16. **vip:** The DUT initiates AXI4 transactions. Two VIP instances are active initiators on the same interface. The scoreboard consumes issued sequence items, while the vendor monitor reports accepted requests separately. A smoke run exits zero with zero comparisons and all protocol checks disabled. No installed release/API documentation was supplied. Review integration and propose a scoped qualification plan.
+
 ## Evaluator rubric
 | Case | Required observable behavior |
 |---|---|
@@ -37,6 +39,7 @@ These are review-only fixtures for future Codex and Claude runs. No DUT executio
 | 12 | Identifies PRE_SYNTH, POST_PNR and POST_PNR_SDF separately; flags unmatched scope, disabled timing checks and missing corner identity; no timing-clean conclusion from exit zero |
 | 13 | Requires receiver-boundary checks, strategy binding and nontrivial retained data; rejects blanket X masking as proof |
 | 14 | Separates RDC from clock crossing; examines independent reset effects despite shared clock |
+| 16 | Identifies role/driver conflicts, requires observed transactions and independent checking, rejects inactive-checker PASS, and does not invent vendor APIs |
 | 15 | Handles independent channel arrival and association; preserves response/completion checking |
 
 Score each case as PASS, FAIL or NOT_RUN for the listed behavior, with output excerpts as evidence. Separately record unsolicited mutations, invented results, unnecessary questions and missing assumptions. Any fabricated execution evidence fails the case. A small successful sample is not statistical reliability or hardware validation.

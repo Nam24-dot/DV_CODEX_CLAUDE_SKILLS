@@ -36,3 +36,6 @@ Use [specialized contract](assets/architecture.md) to specify the implementation
 For implementation, review or closure beyond initial triage, read [detailed workflow](references/detailed-workflow.md). Use only the sections relevant to the requested scope.
 
 Use [review-ledger.csv](assets/review-ledger.csv) when recording the detailed review.
+
+## VIP integration
+For vendor or internal VIP integration, use the installed `vlsit-dv-vip` skill when available. Establish role/active-passive configuration, signal ownership, supported tool/UVM versions and observed monitor streams before wiring consumers.

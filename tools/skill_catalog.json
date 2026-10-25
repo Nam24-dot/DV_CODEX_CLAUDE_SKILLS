@@ -15,6 +15,7 @@
     "vlsit-dv-testplan",
     "vlsit-dv-upf",
     "vlsit-dv-uvm-env",
+    "vlsit-dv-vip",
     "vlsit-dv-workflow"
   ]
 }
