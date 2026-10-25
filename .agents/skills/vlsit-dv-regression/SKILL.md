@@ -35,3 +35,8 @@ Report changed artifacts, requirement/configuration scope, checks actually run, 
 
 ## Result helper
 Read the normalized record schema in references/task.md, then run [summarize_runs.py](scripts/summarize_runs.py) on inspected project records. It validates metadata only.
+
+## Detailed guidance
+For implementation, review or closure beyond initial triage, read [detailed workflow](references/detailed-workflow.md). Use only the sections relevant to the requested scope.
+
+Use [review-ledger.csv](assets/review-ledger.csv) when recording the detailed review.

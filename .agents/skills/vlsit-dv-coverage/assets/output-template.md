@@ -30,3 +30,6 @@ Coverage model, requirement-to-bin map, gap analysis, closure actions and exclus
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Sampling and compatibility review
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

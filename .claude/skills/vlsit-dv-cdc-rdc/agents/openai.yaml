@@ -1,0 +1,4 @@
+interface:
+  display_name: "CDC and RDC Verification"
+  short_description: "Review crossing constraints and CDC/RDC evidence"
+  default_prompt: "Use $vlsit-dv-cdc-rdc to review the supplied artifacts and produce scoped checks, evidence and unresolved decisions."

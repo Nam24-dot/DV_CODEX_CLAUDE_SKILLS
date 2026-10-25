@@ -32,3 +32,8 @@ Report changed artifacts, requirement/configuration scope, checks actually run, 
 
 ## Additional assets
 - Use [properties.csv](assets/properties.csv) for the corresponding task ledger.
+
+## Detailed guidance
+For implementation, review or closure beyond initial triage, read [detailed workflow](references/detailed-workflow.md). Use only the sections relevant to the requested scope.
+
+Use [review-ledger.csv](assets/review-ledger.csv) when recording the detailed review.

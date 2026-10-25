@@ -30,3 +30,6 @@ RAL source/configuration, adapter/predictor integration, register test matrix an
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Prediction and side-effect review
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

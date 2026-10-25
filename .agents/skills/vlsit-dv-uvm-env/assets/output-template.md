@@ -30,3 +30,6 @@ Agent/environment source files, topology/connection map, ordered filelist, smoke
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Component and timing contract
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

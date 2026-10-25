@@ -30,3 +30,6 @@ dv_work_plan.md, requirement ledger, artifact/evidence index and milestone summa
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Dependency and handoff ledger
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

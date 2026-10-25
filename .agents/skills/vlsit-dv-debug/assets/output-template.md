@@ -30,3 +30,6 @@ Root-cause report, minimal reproducer or reproduction instructions, scoped fix a
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Hypothesis and experiment ledger
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

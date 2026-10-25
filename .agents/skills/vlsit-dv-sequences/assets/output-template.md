@@ -30,3 +30,6 @@ Sequence/test classes, scenario matrix, seed/configuration manifest and executed
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Stimulus and response contract
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

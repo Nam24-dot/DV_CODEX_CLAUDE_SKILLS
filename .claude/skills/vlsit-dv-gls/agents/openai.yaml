@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gate-Level Simulation"
+  short_description: "Audit GLS, SDF annotation and timing evidence"
+  default_prompt: "Use $vlsit-dv-gls to review the supplied artifacts and produce scoped checks, evidence and unresolved decisions."

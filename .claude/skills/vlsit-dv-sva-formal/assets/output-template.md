@@ -30,3 +30,6 @@ Assertion/bind files or formal harness, property matrix, assumption ledger and e
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Assumption and activation review
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

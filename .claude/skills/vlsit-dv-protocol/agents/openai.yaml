@@ -1,0 +1,4 @@
+interface:
+  display_name: "Protocol Verification"
+  short_description: "Check bus contracts, ordering and channel timing"
+  default_prompt: "Use $vlsit-dv-protocol to review the supplied artifacts and produce scoped checks, evidence and unresolved decisions."

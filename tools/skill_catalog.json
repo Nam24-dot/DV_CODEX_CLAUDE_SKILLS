@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "skills": [
+    "vlsit-dv-cdc-rdc",
+    "vlsit-dv-coverage",
+    "vlsit-dv-debug",
+    "vlsit-dv-gls",
+    "vlsit-dv-protocol",
+    "vlsit-dv-ral",
+    "vlsit-dv-regression",
+    "vlsit-dv-scoreboard",
+    "vlsit-dv-sequences",
+    "vlsit-dv-signoff",
+    "vlsit-dv-sva-formal",
+    "vlsit-dv-testplan",
+    "vlsit-dv-upf",
+    "vlsit-dv-uvm-env",
+    "vlsit-dv-workflow"
+  ]
+}

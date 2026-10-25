@@ -30,3 +30,6 @@ Reference model/scoreboard, matching/reset contract, checker sensitivity evidenc
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Matching and sensitivity ledger
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

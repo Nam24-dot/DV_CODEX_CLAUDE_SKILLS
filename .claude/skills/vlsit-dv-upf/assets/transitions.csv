@@ -1,0 +1,1 @@
+transition_id,requirement_id,from_state,to_state,affected_domains,preconditions,ordered_events,traffic_policy,reset_policy,retained_state,expected_clamp,checker,coverage,run_id,status,evidence

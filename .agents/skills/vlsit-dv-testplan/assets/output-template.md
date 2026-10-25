@@ -30,3 +30,6 @@ verification_plan.md, requirements.csv, open_questions.md and configuration/test
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Scenario specification
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "UPF and Low-Power Verification"
+  short_description: "Verify power intent, isolation and retention"
+  default_prompt: "Use $vlsit-dv-upf to review the supplied artifacts and produce scoped checks, evidence and unresolved decisions."

@@ -30,3 +30,6 @@ dv_signoff_report.md, evidence index, rule/requirement matrices and open-risk/wa
 - Remaining defects/waivers:
 - Next actions:
 - Human acceptance: not recorded.
+
+## Readiness blockers
+Use [review-ledger.csv](review-ledger.csv) for the detailed rows. Explain the selected contract, the evidence that tests it, and unresolved decisions; leave unexecuted checks explicitly marked.

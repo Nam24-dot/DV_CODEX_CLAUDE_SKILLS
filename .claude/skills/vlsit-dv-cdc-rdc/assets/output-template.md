@@ -1,0 +1,40 @@
+# CDC and RDC Verification — Project output
+
+## Scope
+- DUT/top and source/spec revisions:
+- Configuration, clock/reset and tool/UVM versions:
+- Authoritative behavior versus inferred assumptions:
+
+## Task artifacts
+Specialist review report, crossings.csv, constraints.csv, waivers.csv, raw report/log index and unresolved-risk ledger.
+
+## Requirement traceability
+| Requirement | Source | Scenario | Checker/property | Coverage | Configuration | Evidence/status |
+|---|---|---|---|---|---|---|
+
+## Decisions and open questions
+| Decision/question | Evidence | Impact | Owner | Disposition |
+|---|---|---|---|---|
+
+## Executed checks
+| Check | Command/run ID | Scope | Status | Log/evidence | Limitation |
+|---|---|---|---|---|---|
+
+## Rule assessment
+| Rule ID | Scope | Status | Evidence | Reason |
+|---|---|---|---|---|
+
+## Handoff
+- Delivery status: GENERATED_UNVERIFIED until evidence is assessed.
+- Required checks not executed:
+- Remaining defects/waivers:
+- Next actions:
+- Human acceptance: not recorded.
+
+## Crossing evidence
+- Clock/reset/mode and constraint revisions:
+- Unconstrained or abstracted scope:
+- CDC and RDC results separately:
+- Structural findings and functional protocol evidence:
+- Waiver scope, enforced assumptions and approvals:
+- Unresolved physical/metastability analysis dependencies:

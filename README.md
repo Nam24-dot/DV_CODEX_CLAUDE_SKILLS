@@ -1,6 +1,6 @@
 # Design Verification Skills for Codex and Claude Code
 
-Eleven reusable skills for RTL, IP, and subsystem design verification, covering SystemVerilog/UVM, assertions, coverage, and verification evidence.
+Fifteen reusable skills for RTL, IP, and subsystem design verification, covering SystemVerilog/UVM, assertions, coverage, GLS/SDF, UPF low-power, CDC/RDC, protocols and verification evidence.
 
 ## Attribution
 
@@ -23,6 +23,10 @@ The DV instructions and project policies are independently authored. This is not
 | `vlsit-dv-regression` | Organize regressions and summarize run records |
 | `vlsit-dv-debug` | Analyze failures and reproduce failing seeds |
 | `vlsit-dv-signoff` | Review verification evidence and sign-off readiness |
+| `vlsit-dv-gls` | Review and debug gate-level simulation, SDF annotation and timing/X failures |
+| `vlsit-dv-upf` | Review power intent and verify isolation, retention and power transitions |
+| `vlsit-dv-cdc-rdc` | Audit crossing constraints, CDC/RDC reports, protocols and waivers |
+| `vlsit-dv-protocol` | Verify protocol variants, channel timing, ordering and checker activation |
 
 ## Setup and use
 
@@ -79,9 +83,13 @@ Provide actual project paths, the top-level module, specification, simulator, UV
 
 Python 3.9+ and its standard library are sufficient for the included helpers.
 
-- `python3 tools/validate_suite.py`: checks metadata, local links, paired-tree equality, rule consistency, and script syntax.
+- `python3 tools/validate_suite.py`: checks the catalog, restricted UI metadata schema, local Markdown file links throughout each skill, paired-tree equality, unique rules, and script syntax. Link anchors and remote URLs are not validated.
 - `python3 .agents/skills/vlsit-dv-regression/scripts/summarize_runs.py runs.json --out summary.json`: validates and aggregates normalized run records; it does not parse simulator logs or establish correctness.
 - `python3 tools/test_helpers.py`: runs synthetic positive and negative checks for the result summarizer.
+- `python3 tools/test_validator.py`: checks that malformed metadata, broken nested links, missing rules, tree drift and catalog mismatches are rejected.
+- `tools/skill_catalog.json`: explicit skill inventory; update it when adding or retiring a skill.
+
+The UI validator deliberately supports this suite's three JSON-quoted `interface` strings, not arbitrary YAML. Extend its schema and tests before introducing optional policy/dependency fields.
 
 See [VALIDATION.md](VALIDATION.md) for the validation scope, results, and limitations. The suite has not been validated against a real DUT or simulator.
 
@@ -94,3 +102,37 @@ See [VALIDATION.md](VALIDATION.md) for the validation scope, results, and limita
 - [Claude Code skill documentation](https://code.claude.com/docs/en/skills)
 
 Pin the actual project tool and UVM versions. These links are references, not bundled dependencies or a promise that every simulator supports every UVM/SVA construct.
+
+## Detailed workflows and specialist use
+
+Each original skill now includes `references/detailed-workflow.md` and an editable `assets/review-ledger.csv`. New specialist skills include stage-by-stage references and domain-specific ledgers. Entry points route to these resources only when the task needs the detail. Templates contain headers, not fabricated PASS rows.
+
+| Specialist | Review stages | Primary ledgers |
+|---|---|---|
+| GLS | PRE_SYNTH, POST_PNR without SDF, POST_PNR_SDF; artifact pairing, annotation audit and timing/X diagnosis | annotation, scenarios, violations |
+| UPF | Domain/supply inventory, resolved strategies, legal transitions, isolation, retention/recovery, coverage | domains, transitions, strategies |
+| CDC/RDC | Constraint coverage, crossing classification, protocol/reset analysis, triage and waivers | crossings, constraints, waivers |
+| Protocol | Version/features, channel contract, legal/negative stimulus, matching, activation | channels, scenarios |
+
+Example prompts (replace artifact paths with real project paths):
+
+```text
+$vlsit-dv-gls Review netlist/chip.v, timing/chip.sdf and logs/annotation.log against our required corner matrix. Audit annotation completeness before assessing timing-run results; preserve unmatched instances and timing-check failures.
+$vlsit-dv-upf Review power/top.upf and spec/power.md. Produce domain and transition ledgers, then implement supported isolation/retention checks. Keep unknown save/restore ordering explicit.
+$vlsit-dv-cdc-rdc Review reports/cdc.txt, reports/rdc.txt and constraints/ against spec/clock_reset.md. Separate setup gaps, unsafe crossings and evidence-backed waivers.
+$vlsit-dv-protocol Review the supplied AXI4-Lite agent against the selected protocol issue. Exercise independent AW/W arrivals, backpressure, error responses and reset with pending transfers.
+```
+
+For Claude Code use `/vlsit-dv-gls`, `/vlsit-dv-upf`, `/vlsit-dv-cdc-rdc` or `/vlsit-dv-protocol` with the same project context. Do not assume a skill name installs simulator support, a license, protocol VIP or technology libraries.
+
+GLS is not STA or equivalence sign-off. Power-aware simulation is not physical low-power implementation sign-off. Digital simulation does not prove analog metastability safety. Use the project's required specialist tools and record unavailable checks honestly.
+
+See [behavioral evaluation cases](EVALUATION.md) for reproducible review scenarios and scoring criteria. These cases are provided for future model runs; their presence is not evidence that an agent passed them.
+
+### GLS phase terminology
+
+1. **Pre-simulation after synthesis (PRE_SYNTH):** synthesized netlist, without SDF.
+2. **Post-simulation after place and route (POST_PNR):** post-PNR netlist, without SDF.
+3. **Post-simulation after place and route + SDF (POST_PNR_SDF):** matching post-PNR netlist and extracted SDF, with corner-specific annotation and timing checks.
+
+See the [phase-by-phase GLS procedure](.agents/skills/vlsit-dv-gls/references/phases.md). No-SDF runs still record actual library delays and simulator options; power-aware operation is an additional mode rather than a fourth phase.
